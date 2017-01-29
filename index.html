@@ -12,7 +12,9 @@
         <script type="text/javascript" src="src/js/main.js"></script>
     </head>
     <body ng-app="playgroundApp">
-        <h1>Welcome to the AngularJS Playground</h1>
-        <multistep-component title="Multistep component - simple demo" step-components="[{name: 'dummy-component', title: 'Enter some basic data'}, {name: 'another-dummy-component',title: 'Please provide some more information'}]"></multistep-component>
+        <div ng-controller="MainController as ctrl">
+            <h1>Welcome to the AngularJS Playground</h1>
+            <multistep-component title="Multistep component - simple demo" step-components="ctrl.components"></multistep-component>
+        </div>
     </body>
 </html>
