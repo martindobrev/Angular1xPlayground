@@ -1,0 +1,12 @@
+<h2>{{ctrl.title}}</h2>
+<hr/>
+<div ng-repeat="component in ctrl.stepComponents">
+    <h4>El number: {{$index + 1}}</h4>
+    <div ng-show="$index == ctrl.currentStep" style="margin-left: 50px;" id="componentContainer_{{component}}">
+        <step-component component="{{component}}" next="ctrl.next()"
+                        previous="ctrl.previous()" show-next-button="true"
+                        show-previous-button="!$first">
+        </step-component>
+    </div>
+    <hr/>
+</div>

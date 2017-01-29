@@ -1,0 +1,15 @@
+<div>
+    <h3>Just another dummy component</h3>
+    <p>Please enter your phone number, and your address</p>
+    <form novalidate>
+        <div>
+            <label>Phone</label>: <input name="firstname" type="text" ng-model="ctrl.data.phone"/>
+            <span ng-if="ctrl.errors.phone" style="color: red;">{{ctrl.errors.phone}}</span>
+        </div>
+        <div>
+            <label>Address</label>: <input name="lastname" type="text" ng-model="ctrl.data.address"/>
+            <span ng-if="ctrl.errors.address" style="color: red;">{{ctrl.errors.address}}</span>
+        </div>
+    </form>
+
+</div>

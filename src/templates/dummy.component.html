@@ -1,0 +1,22 @@
+<div>
+    <h3>Dummy component number 1</h3>
+    <p>Here some inputs to simulate validation</p>
+    <form novalidate>
+        <div>
+            <label>Firstname</label>: <input name="firstname" type="text" ng-model="ctrl.data.firstname"/>
+            <span ng-if="ctrl.errors.firstname" style="color: red;">{{ctrl.errors.firstname}}</span>
+        </div>
+        <div>
+            <label>Lastname</label>: <input name="lastname" type="text" ng-model="ctrl.data.lastname"/>
+            <span ng-if="ctrl.errors.lastname" style="color: red;">{{ctrl.errors.lastname}}</span>
+        </div>
+        <div>
+            <label>Email</label>: <input name="email" type="text" ng-model="ctrl.data.email"/>
+            <span ng-if="ctrl.errors.email" style="color:red;">{{ctrl.errors.email}}</span>
+        </div>
+
+        <hr>
+        <p>Results: {{ctrl.firstname}}, {{ctrl.lastname}}, {{ctrl.email}}
+    </form>
+
+</div>
