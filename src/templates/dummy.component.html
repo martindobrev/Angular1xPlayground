@@ -1,6 +1,5 @@
 <div>
-    <h3>Dummy component number 1</h3>
-    <p>Here some inputs to simulate validation</p>
+    <p><b>Here some inputs with a basic validation</b></p>
     <form novalidate>
         <div>
             <label>Firstname</label>: <input name="firstname" type="text" ng-model="ctrl.data.firstname"/>
@@ -14,9 +13,5 @@
             <label>Email</label>: <input name="email" type="text" ng-model="ctrl.data.email"/>
             <span ng-if="ctrl.errors.email" style="color:red;">{{ctrl.errors.email}}</span>
         </div>
-
-        <hr>
-        <p>Results: {{ctrl.firstname}}, {{ctrl.lastname}}, {{ctrl.email}}
     </form>
-
 </div>

@@ -4,19 +4,15 @@ appModule.component('stepComponent', {
     templateUrl: 'src/templates/step.component.html',
     bindings: {
         title               : '@',
-        component           : '@',
+        component           : '<',
         next                : '&',
         previous            : '&',
         showPreviousButton  : '<',
-        showNextButton      : '<',
+        showNextButton      : '<'
     },
     controller: function($log, $compile, $element, $scope) {
         var ctrl = this;
-        $log.info('showNextButton: ' + this.showNextButton + ", showPreviousButton: " + this.showPreviousButton);
-        $log.info(typeof(this.showNextButton));
-        $scope.component = this.component;
 
-        ctrl.isValid = true;
         ctrl.data = {
             firstname   : null,
             lastname    : null,

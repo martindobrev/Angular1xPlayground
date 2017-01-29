@@ -8,7 +8,6 @@ appModule.component('dummyComponent', {
     },
     controller: function($log, $scope) {
         var ctrl = this;
-
         ctrl.errors = {};
         ctrl.data.validate = function() {
             var errors = {};

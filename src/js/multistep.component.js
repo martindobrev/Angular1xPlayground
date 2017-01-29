@@ -10,7 +10,6 @@ appModule.component('multistepComponent', {
     controller: function($log, $compile, $element, $scope) {
         var ctrl = this;
         ctrl.currentStep = 0;
-        $scope.title = this.title;
 
         ctrl.next = function() {
             $log.info("Switching to next step");
