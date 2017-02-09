@@ -1,7 +1,7 @@
 var appModule = angular.module('playgroundApp');
 
 appModule.component('dummyComponent', {
-    templateUrl: 'src/templates/dummy.component.html',
+    templateUrl: 'src/templates/multistep/dummy.component.html',
     bindings: {
         title       : '@',
         data        : '='
