@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Floating Footer Demo | Angular Playground</title>
+        <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="src/js/app.js"></script>
+        <script type="text/javascript" src="src/js/floating_footer/floatingFooterDirective.js"></script>
+        <script type="text/javascript" src="src/js/floating_footer/main.js"></script>
+
+        <style type="text/css">
+            .floating_footer_menu {
+                position: fixed;
+                bottom: 0;
+                width: 90%;
+                margin: 0 5px;
+                z-index: 10000;
+                background-color: #f5f1e8;
+                border: 2px solid #806f60;
+                border-bottom: 0px;
+            }
+        </style>
+
+    </head>
+    <body ng-app="playgroundApp">
+        <div ng-controller="MainController as ctrl">
+
+            <floating-footer-directive class="floating_footer_menu"
+                disable-resize="false" side-margin="20"
+                disappear-on-scroll-to-bottom="true">
+            </floating-footer-directive>
+
+
+            <a href="index.html">&lt;Go back to demos list</a>
+
+            <h1>Floating Footer Simple Demo</h1>
+            <p><b>In order to test the footer correctly, we need to have a page with plenty of content (a scrollable one). Therefore some paragraphs of lorep ipsum will follow</b></p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                mattis, urna a ultricies euismod, dui nibh sollicitudin est,
+                eget commodo nisi turpis sed mi. Mauris nec augue ac diam luctus
+                 luctus auctor sit amet est. Lorem ipsum dolor sit amet,
+                 consectetur adipiscing elit. Mauris vel tellus enim. Etiam
+                 tincidunt, quam eu placerat ultrices, tellus urna luctus neque,
+                  ut efficitur risus velit vel dolor. Quisque mollis sapien elit,
+             facilisis ullamcorper leo gravida ac. Fusce sed metus sem.
+             Nulla vehicula libero sit amet condimentum rhoncus. Duis bibendum
+             rhoncus enim, a maximus quam. In tortor lectus, dapibus quis turpis
+             sit amet, pharetra eleifend ligula.
+            </p>
+
+            <p>In hac habitasse platea dictumst. Sed mattis pulvinar eros ac lobortis.
+             Maecenas eget hendrerit odio. Donec pretium sapien ligula.
+             Morbi hendrerit nunc ac viverra vestibulum. Etiam rutrum tempor purus,
+              ac sodales neque hendrerit et. Fusce eu pulvinar elit. In luctus
+              posuere sapien sit amet pretium. Vivamus orci diam, efficitur nec
+              lectus sit amet, placerat vulputate sem. Nulla vel ornare tellus.
+              In non ligula tempus nulla feugiat commodo non eu mauris. Pellentesque
+              porttitor suscipit ex. Nunc eget leo sit amet mi porttitor posuere.
+              Etiam quis tellus ac risus maximus vehicula non id neque. Praesent
+               malesuada orci ac dolor semper pulvinar.
+           </p>
+
+           <p>Duis aliquam scelerisque tortor. Quisque rhoncus viverra purus sit amet
+             laoreet. Vestibulum ornare dui odio, ut dapibus erat euismod non. Proin
+              a cursus tortor. Praesent vehicula tincidunt mi. Cras mollis lacus
+              in interdum maximus. Ut ac purus neque. Fusce rutrum dictum tortor,
+         ut sagittis ante mollis non. Mauris velit nisi, condimentum sed vehicula
+          quis, pellentesque nec augue. Quisque tincidunt ante eget elementum tempus.
+           Sed vitae aliquam magna, vel hendrerit leo.
+            </p>
+
+
+            <p>In sit amet fringilla turpis. Nulla at suscipit libero. Proin dictum eget
+           lacus sed fringilla. Cras vestibulum neque et volutpat pharetra. Morbi
+           blandit congue felis. Praesent sed molestie elit. Donec eu blandit elit.
+           Aenean luctus sollicitudin eros, a consectetur enim elementum et. Praesent
+           ultrices odio odio, a euismod erat lobortis quis. Mauris eget aliquet sem.
+            Nulla ut maximus elit. Ut posuere quis erat vel sollicitudin. Sed quis semper orci.
+            </p>
+
+            <p>Vestibulum dui sem, maximus quis blandit ac, bibendum nec felis. Sed pellentesque,
+             tellus viverra bibendum faucibus, ipsum est sollicitudin diam, sed molestie nunc
+             lectus id mauris. Nullam vel sapien nec purus aliquet volutpat id sit amet nibh.
+             Cras vestibulum, augue viverra volutpat imperdiet, nulla nisi tristique neque,
+             a egestas leo neque elementum velit. Sed consectetur quam id leo euismod, at
+             mattis mi hendrerit. Donec viverra, nisl non consequat posuere, diam diam
+             condimentum augue, ac hendrerit est sapien vel dolor. Nulla facilisi.
+            </p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            mattis, urna a ultricies euismod, dui nibh sollicitudin est,
+            eget commodo nisi turpis sed mi. Mauris nec augue ac diam luctus
+             luctus auctor sit amet est. Lorem ipsum dolor sit amet,
+             consectetur adipiscing elit. Mauris vel tellus enim. Etiam
+             tincidunt, quam eu placerat ultrices, tellus urna luctus neque,
+              ut efficitur risus velit vel dolor. Quisque mollis sapien elit,
+         facilisis ullamcorper leo gravida ac. Fusce sed metus sem.
+         Nulla vehicula libero sit amet condimentum rhoncus. Duis bibendum
+         rhoncus enim, a maximus quam. In tortor lectus, dapibus quis turpis
+         sit amet, pharetra eleifend ligula.
+            </p>
+
+            <p>In hac habitasse platea dictumst. Sed mattis pulvinar eros ac lobortis.
+         Maecenas eget hendrerit odio. Donec pretium sapien ligula.
+         Morbi hendrerit nunc ac viverra vestibulum. Etiam rutrum tempor purus,
+          ac sodales neque hendrerit et. Fusce eu pulvinar elit. In luctus
+          posuere sapien sit amet pretium. Vivamus orci diam, efficitur nec
+          lectus sit amet, placerat vulputate sem. Nulla vel ornare tellus.
+          In non ligula tempus nulla feugiat commodo non eu mauris. Pellentesque
+          porttitor suscipit ex. Nunc eget leo sit amet mi porttitor posuere.
+          Etiam quis tellus ac risus maximus vehicula non id neque. Praesent
+           malesuada orci ac dolor semper pulvinar.
+            </p>
+
+            <p>Duis aliquam scelerisque tortor. Quisque rhoncus viverra purus sit amet
+         laoreet. Vestibulum ornare dui odio, ut dapibus erat euismod non. Proin
+          a cursus tortor. Praesent vehicula tincidunt mi. Cras mollis lacus
+          in interdum maximus. Ut ac purus neque. Fusce rutrum dictum tortor,
+     ut sagittis ante mollis non. Mauris velit nisi, condimentum sed vehicula
+      quis, pellentesque nec augue. Quisque tincidunt ante eget elementum tempus.
+       Sed vitae aliquam magna, vel hendrerit leo.
+            </p>
+
+
+            <p>In sit amet fringilla turpis. Nulla at suscipit libero. Proin dictum eget
+       lacus sed fringilla. Cras vestibulum neque et volutpat pharetra. Morbi
+       blandit congue felis. Praesent sed molestie elit. Donec eu blandit elit.
+       Aenean luctus sollicitudin eros, a consectetur enim elementum et. Praesent
+       ultrices odio odio, a euismod erat lobortis quis. Mauris eget aliquet sem.
+        Nulla ut maximus elit. Ut posuere quis erat vel sollicitudin. Sed quis semper orci.
+            </p>
+
+            <p>Vestibulum dui sem, maximus quis blandit ac, bibendum nec felis. Sed pellentesque,
+         tellus viverra bibendum faucibus, ipsum est sollicitudin diam, sed molestie nunc
+         lectus id mauris. Nullam vel sapien nec purus aliquet volutpat id sit amet nibh.
+         Cras vestibulum, augue viverra volutpat imperdiet, nulla nisi tristique neque,
+         a egestas leo neque elementum velit. Sed consectetur quam id leo euismod, at
+         mattis mi hendrerit. Donec viverra, nisl non consequat posuere, diam diam
+         condimentum augue, ac hendrerit est sapien vel dolor. Nulla facilisi.
+            </p>
+
+
+        <footer>
+            <p>Real footer here</p>
+            <p>Some company logo copyright or ...</p>
+        </footer>
+    </div>
+    </body>
+</html>
