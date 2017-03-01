@@ -7,8 +7,6 @@ appModule.directive('floatingFooterDirective', ['$log', function($log) {
 
         element.css('width', '300px');
 
-
-
         if (false != attrs.disableResize) {
             window.addEventListener('resize', resize);
         }
@@ -47,8 +45,13 @@ appModule.directive('floatingFooterDirective', ['$log', function($log) {
 
     return {
         restrict: 'AE',
-        template: '<h1>HELLO WORLD</h1>',
-        link: link
+        template: '<h1>HELLO WORLD</h1><div ng-repeat="price in prices"><p><span>{{price.type}}</span>: <span>{{price.price}}</span></p></div>',
+        link: link,
+        scope: {
+            sideMargin: '<',
+            prices: '<',
+            totalPrice: '<'
+        }
     }
 
 }]);

@@ -1,6 +1,6 @@
 <div>
     <p><b>Here some inputs with a basic validation</b></p>
-    <form novalidate>
+    <form>
         <div>
             <label>Firstname</label>: <input name="firstname" type="text" ng-model="ctrl.data.firstname"/>
             <span ng-if="ctrl.errors.firstname" style="color: red;">{{ctrl.errors.firstname}}</span>
