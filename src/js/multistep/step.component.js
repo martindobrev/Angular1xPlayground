@@ -11,7 +11,7 @@ appModule.component('stepComponent', {
         showNextButton      : '<',
         data                : '='
     },
-    controller: function($log, $compile, $element, $scope) {
+    controller: function($log, $compile, $element, $scope, $q) {
         var ctrl = this;
 
         // Initialize data if empty
@@ -24,9 +24,19 @@ appModule.component('stepComponent', {
         }
 
         ctrl.onShowNext = function(obj) {
-            if (ctrl.data.validate()) {
-                $log.info("Trying to switch to next step");
-                ctrl.next(ctrl.data);
+
+            // Check if the function is a promise
+            if ('function' === typeof ctrl.data.validate) {
+                $q.when(ctrl.data.validate()).then(function(result) {
+                    if (result) {
+                        ctrl.next(ctrl.data);
+                    }
+                });
+            } else {
+                if (ctrl.data.validate()) {
+                    $log.info("Trying to switch to next step");
+                    ctrl.next(ctrl.data);
+                }
             }
         };
 

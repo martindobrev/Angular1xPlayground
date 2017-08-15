@@ -3,13 +3,18 @@ angular.module('playgroundApp').controller('MainController', ['$log', function($
 
     this.data = {
         dummyComponent : null,
-        anotherDummyComponent : null
+        anotherDummyComponent : null,
+        asyncValidationComponent: null
     };
 
     this.components = [{
         name: 'dummy-component',
         title: 'Enter some basic data',
         data: this.data.dummyComponent
+    },{
+        name: 'async-validation-component',
+        title: 'Async validation example',
+        data: this.data.asyncValidationComponent
     }, {
         name: 'another-dummy-component',
         title: 'Please provide some more information',

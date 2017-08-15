@@ -1,0 +1,10 @@
+<div>
+    <h3>This component has an async validation</h3>
+    <p>Enter "NEXT" to pass the validation</p>
+    <form>
+        <div>
+            <label>Keyword</label>: <input name="keyword" type="text" ng-model="ctrl.data.keyword"/>
+            <span ng-if="ctrl.errors.keyword" style="color: red;">{{ctrl.errors.keyword}}</span>
+        </div>
+    </form>
+</div>
